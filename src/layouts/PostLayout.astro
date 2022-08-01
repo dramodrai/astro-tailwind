@@ -1,11 +1,11 @@
 ---
-// export interface Props {
-//   content: string;
-// }
+export interface Props {
+  content: string;
+}
 
 const { content } = Astro.props;
 import Header from "../components/Header.astro";
-// import "../styles/base.css";
+import "../styles/base.css";
 ---
 
 <!DOCTYPE html>
@@ -16,12 +16,14 @@ import Header from "../components/Header.astro";
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{content.name}</title>
   </head>
-  <body>
-    <!-- <Header /> -->
+  <body
+    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"
+  >
+    <Header />
     <div class="w-3/4 mx-auto">
-      <div class="mt-24"></div>
+      <div class="mt-24 mb-9"></div>
+      <h1 class="text-4xl">{content.name}</h1>
       <slot />
-      <h1 class="text-4xl">{content.slug}</h1>
     </div>
   </body>
 </html>

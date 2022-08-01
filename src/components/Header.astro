@@ -12,8 +12,8 @@ const {} = Astro.props;
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
         <span
-          class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"
-          >AstroWind
+          class="self-center ml-2 text-2xl font-bold text-orange-500 whitespace-nowrap hover:text-pink-800"
+          >Astro-Tailwind
         </span>
       </a>
       <div class="flex items-center lg:hidden">
@@ -42,22 +42,8 @@ const {} = Astro.props;
         <li>
           <a
             class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="#"
-            >Products
-          </a>
-        </li>
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="#"
-            >Docs
-          </a>
-        </li>
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="#"
-            >Resources
+            href="/about"
+            >About
           </a>
         </li>
       </ul>
@@ -73,10 +59,14 @@ const {} = Astro.props;
             <Icon name="carbon:sun" class="h-6" />
           </button>
           <a
-            href="/about"
-            class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"
+            href="https://github.com/dramodrai"
+            target="_blank"
+            class="inline-block text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"
           >
-            <Icon name="mdi:github" class="h-6" />
+            <Icon
+              name="mdi:github"
+              class="h-6 hover:text-green-600 hover:scale-110 transition-all duration-300"
+            />
           </a>
 
           <!-- <a class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium  text-center ml-3 btn-sm" href="/login/">Get started
@@ -85,4 +75,28 @@ const {} = Astro.props;
       </div>
     </div>
   </div>
+  <script is:inline>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+      localStorage.theme = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
+    }
+    window.toggleDarkMode = toggleDarkMode;
+
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("hidden");
+    }
+    window.toggleMenu = toggleMenu;
+  </script>
 </header>

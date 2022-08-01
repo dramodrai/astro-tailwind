@@ -1,15 +1,11 @@
 ---
-name: "Love is Good"
-slug: "love_is_good"
+name: "Astro Tailwind Learn and Deploy"
+slug: "astro_tailwind"
 layout: ../../layouts/PostLayout.astro
 
 ---
 
-# Markdown file
-
-## Not Good in Shape
-
-[back](../)
+# Best way to deploy web application fast and easy
 
 ```js
 

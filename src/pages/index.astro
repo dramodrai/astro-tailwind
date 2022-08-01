@@ -3,17 +3,19 @@ import Layout from "../layouts/Layout.astro";
 const posts = await Astro.glob("./posts/*.md");
 ---
 
-<Layout title="Amod">
-  <div class="p-4 m-4">
-    <h2 class="text-green-500 text-8xl mt-9 font-bold">Hello</h2>
-    <a href="/love">Page two</a>
-
-    {posts.map((post) => (
-      <h1>
-        <a class="text-amber-600 underline" href="/posts/post">
-          {post.frontmatter.name}
-        </a>
-      </h1>
-    ))}
+<Layout title="Astro Tailwind with new packages">
+  <div class="w-full justify-center mt-24">
+    <div class="w-3/4 mx-auto ">
+      <h2 class="text-green-500 text-3xl mb-9 font-bold">
+        Posts Reading Astro Js with new Packages
+      </h2>
+      {posts.map((post) => (
+        <h1>
+          <a class="text-amber-600 underline" href="/posts/post">
+            {post.frontmatter.name}
+          </a>
+        </h1>
+      ))}
+    </div>
   </div>
 </Layout>
