@@ -1,0 +1,49 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+import Header from "../components/Header.astro";
+import "../styles/base.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body
+    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"
+  >
+    <Header />
+    <slot />
+    <script is:inline>
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+        localStorage.theme = document.documentElement.classList.contains("dark")
+          ? "dark"
+          : "light";
+      }
+      window.toggleDarkMode = toggleDarkMode;
+
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("hidden");
+      }
+      window.toggleMenu = toggleMenu;
+    </script>
+  </body>
+</html>

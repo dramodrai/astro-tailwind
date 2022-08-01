@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<Layout title="Amod">
+  <div class="p-4 m-4">
+    <h2 class="text-green-500 text-8xl mt-9 font-bold">Hello</h2>
+    <a href="/love">Page two</a>
+
+    {posts.map((post) => (
+      <h1>
+        <a class="text-amber-600 underline" href="/posts/post">
+          {post.frontmatter.name}
+        </a>
+      </h1>
+    ))}
+  </div>
+</Layout>

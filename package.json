@@ -1,0 +1,22 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^0.4.0",
+    "@astrojs/preact": "^0.5.2",
+    "@astrojs/tailwind": "^0.2.5",
+    "astro": "^1.0.0-rc.2",
+    "preact": "^10.10.0",
+    "prettier-plugin-astro": "^0.2.0"
+  },
+  "dependencies": {
+    "astro-icon": "^0.7.3"
+  }
+}
