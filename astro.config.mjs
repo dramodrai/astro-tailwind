@@ -1,8 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import preact from "@astrojs/preact";
+import preact from "@astrojs/preact"; // import mdx from '@astrojs/mdx';
+// https://astro.build/config
 
+import vue from "@astrojs/vue";
+import sitemap from "@astrojs/sitemap";
 
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,7 +14,7 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), preact(), ],
+  }), preact(), vue(), sitemap(), mdx()],
   vite: {
     ssr: {
       external: ["svgo"]
@@ -20,9 +24,9 @@ export default defineConfig({
     shikiConfig: {
       theme: 'dracula',
       langs: [],
-      wrap: true,
+      wrap: true
     },
     // syntaxHighlight: 'prism',
-    drafts: true,
+    drafts: true
   }
 });

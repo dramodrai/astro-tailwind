@@ -1,5 +1,5 @@
 ---
-Layout: ../../layouts/PostLayout.astro
+
 
 ---
 # Testing

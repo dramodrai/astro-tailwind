@@ -9,10 +9,12 @@
     "resolveJsonModule": true,
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
-    // Add type definitions for our Astro runtime.
-    "types": ["astro/client"],
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    
+    // Add type definitions for our Vite runtime.
+    "types": ["vite/client"],
+    // Alias `src/` to `~`
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
   }
 }

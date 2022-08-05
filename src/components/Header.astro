@@ -7,22 +7,25 @@ const {} = Astro.props;
   class="fixed top-0 z-40 flex-none mx-auto w-full bg-white/90 dark:bg-slate-900 backdrop-blur-sm border-b dark:border-b-0"
 >
   <div
-    class="py-3 px-3 mx-auto w-full lg:flex lg:justify-between max-w-6xl lg:px-4"
+    class="py-3 px-3 mx-auto w-full lg:flex lg:justify-between max-w-6xl lg:px-4 transition-all duration-300"
   >
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
         <span
-          class="self-center ml-2 text-2xl font-bold text-orange-500 whitespace-nowrap hover:text-pink-800"
+          class="self-center ml-2 sm:text-xl md:text-2xl transition-all duration-300 md:font-bold text-orange-500 whitespace-nowrap hover:text-pink-800"
           >Astro-Tailwind
         </span>
       </a>
       <div class="flex items-center lg:hidden">
         <button
           type="button"
-          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+          class="text-gray-500 dark:text-gray-400  focus:outline-none    rounded-lg text-sm p-2.5 inline-flex items-center"
           onclick="window.toggleDarkMode()"
         >
-          <Icon name="carbon:sun" class="h-6" />
+          <Icon
+            name="carbon:sun"
+            class="h-6 hover:text-green-600 hover:scale-125 transition-all duration-300"
+          />
         </button>
         <button
           class="ml-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
@@ -53,10 +56,13 @@ const {} = Astro.props;
         <div class="hidden items-center mr-3 lg:flex">
           <button
             type="button"
-            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+            class="text-gray-500 dark:text-gray-400  focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
             onclick="window.toggleDarkMode()"
           >
-            <Icon name="carbon:sun" class="h-6" />
+            <Icon
+              name="carbon:sun"
+              class="h-6 hover:text-green-600 hover:scale-110 transition-all duration-300"
+            />
           </button>
           <a
             href="https://github.com/dramodrai"
