@@ -15,6 +15,11 @@ import "../styles/base.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{content.name}</title>
+    <script>
+      // Render blocking JS:
+      if (localStorage.theme)
+        document.documentElement.setAttribute("data-theme", localStorage.theme);
+    </script>
   </head>
   <body>
     <Header />
