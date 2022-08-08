@@ -16,14 +16,14 @@ import "../styles/base.css";
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{content.name}</title>
   </head>
-  <body
-    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"
-  >
+  <body>
     <Header />
-    <div class="w-3/4 mx-auto">
-      <div class="mt-24 mb-9"></div>
-      <h1 class="text-4xl">{content.name}</h1>
-      <slot />
+    <div class="w-full justify-center items center">
+      <div class="w-3/4 mx-auto">
+        <div class="mt-24 mb-9"></div>
+        <h1 class="text-4xl">{content.name}</h1>
+        <slot />
+      </div>
     </div>
   </body>
 </html>

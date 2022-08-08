@@ -1,10 +1,12 @@
 ---
 import { Icon } from "astro-icon";
+import Theme from "./Theme.vue";
+
 const {} = Astro.props;
 ---
 
 <header
-  class="fixed top-0 z-40 flex-none mx-auto w-full bg-white/90 dark:bg-slate-900 backdrop-blur-sm border-b dark:border-b-0"
+  class="fixed top-0 z-40 flex-none mx-auto w-full backdrop-blur-2xl border-b dark:border-b-0"
 >
   <div
     class="py-3 px-3 mx-auto w-full lg:flex lg:justify-between max-w-6xl lg:px-4 transition-all duration-300"
@@ -17,7 +19,7 @@ const {} = Astro.props;
         </span>
       </a>
       <div class="flex items-center lg:hidden">
-        <button
+        <!-- <button
           type="button"
           class="text-gray-500 dark:text-gray-400  focus:outline-none    rounded-lg text-sm p-2.5 inline-flex items-center"
           onclick="window.toggleDarkMode()"
@@ -26,25 +28,22 @@ const {} = Astro.props;
             name="carbon:sun"
             class="h-6 hover:text-green-600 hover:scale-125 transition-all duration-300"
           />
-        </button>
+        </button> -->
         <button
-          class="ml-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+          class="ml-1focus:outline-none focus:ring-4  rounded-lg text-sm p-2.5 inline-flex items-center"
           onclick="toggleMenu()"
         >
           <Icon name="carbon:menu" class="h-6" />
         </button>
       </div>
     </div>
-    <div
-      class="items-center w-full lg:w-auto hidden lg:flex text-gray-600 dark:text-slate-200"
-      id="menu"
-    >
+    <div class="items-center w-full lg:w-auto hidden lg:flex " id="menu">
       <ul
         class="flex flex-col py-2 lg:py-0 lg:flex-row lg:self-center collapse w-full lg:w-auto collapsed"
       >
         <li>
           <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="font-medium  px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="/about"
             >About
           </a>
@@ -54,7 +53,7 @@ const {} = Astro.props;
         class="lg:self-center flex items-center mb-4 lg:mb-0 collapse collapsed"
       >
         <div class="hidden items-center mr-3 lg:flex">
-          <button
+          <!-- <button
             type="button"
             class="text-gray-500 dark:text-gray-400  focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
             onclick="window.toggleDarkMode()"
@@ -63,25 +62,27 @@ const {} = Astro.props;
               name="carbon:sun"
               class="h-6 hover:text-green-600 hover:scale-110 transition-all duration-300"
             />
-          </button>
+          </button> -->
           <a
             href="https://github.com/dramodrai"
             target="_blank"
-            class="inline-block text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"
+            class="inline-blockrounded-lg text-sm p-2.5 mr-1"
           >
             <Icon
               name="mdi:github"
               class="h-6 hover:text-green-600 hover:scale-110 transition-all duration-300"
             />
           </a>
+          <!-- <Dark client:load /> -->
 
           <!-- <a class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium  text-center ml-3 btn-sm" href="/login/">Get started
           </a> -->
         </div>
       </div>
+      <Theme client:visible />
     </div>
   </div>
-  <script is:inline>
+  <!-- <script is:inline>
     function toggleDarkMode() {
       document.documentElement.classList.toggle("dark");
       localStorage.theme = document.documentElement.classList.contains("dark")
@@ -100,6 +101,12 @@ const {} = Astro.props;
       document.documentElement.classList.remove("dark");
     }
 
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("hidden");
+    }
+    window.toggleMenu = toggleMenu;
+  </script> -->
+  <script is:inline>
     function toggleMenu() {
       document.getElementById("menu").classList.toggle("hidden");
     }

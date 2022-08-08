@@ -1,13 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const posts = await Astro.glob("./posts/*.md");
+import Theme from "../components/Theme.vue";
+import "../styles/base.css";
 ---
 
-<Layout title="Astro Tailwind with new packages">
-  <div class="w-full justify-center mt-24">
-    <div class="w-3/4 mx-auto ">
-      <h2 class="text-green-500 text-3xl mb-9 font-bold">
-        Posts Reading Astro Js with new Packages
+<BaseLayout title="Astro Tailwind with new packages">
+  <div class="w-full h-screen justify-center mt-20 ">
+    <div class="w-3/4 mx-auto">
+      <h2 class="text-green-500 text-3xl mt-48 mb-9 font-bold ">
+        Astro Js with new Packages 🚀
       </h2>
       {posts.map((post) => (
         <h1>
@@ -18,4 +20,4 @@ const posts = await Astro.glob("./posts/*.md");
       ))}
     </div>
   </div>
-</Layout>
+</BaseLayout>
