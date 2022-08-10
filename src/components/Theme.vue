@@ -15,6 +15,9 @@ import { themeChange } from "theme-change";
 onMounted(() => {
   themeChange(false);
 });
+onUpdated(() => {
+  localStorage.setItem(themeChange(true));
+});
 
 const themes = [
   "light",
