@@ -16,7 +16,7 @@ onMounted(() => {
   themeChange(false);
 });
 onUpdated(() => {
-  localStorage.setItem(themeChange(true));
+  localStorage.setItem("themechange");
 });
 
 const themes = [
