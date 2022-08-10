@@ -7,17 +7,28 @@ import "../styles/base.css";
 
 <BaseLayout title="Astro Tailwind with new packages">
   <div class="w-full h-screen justify-center mt-20 ">
-    <div class="w-3/4 mx-auto">
-      <h2 class="text-green-500 text-3xl mt-48 mb-9 font-bold ">
+    <div class=" w-[80%] mx-auto">
+      <h2
+        class="text-green-500 text-xl md:text-3xl transition-all mt-28 mb-9 font-bold "
+      >
         Astro Js with new Packages 🚀
       </h2>
       {posts.map((post) => (
-        <h1>
-          <a class="text-amber-600 underline" href="/posts/post">
-            {post.frontmatter.name}
-          </a>
-        </h1>
+        <div class="card w-96 bg-base-100 shadow-md hover:shadow-2xl hover:transition-all duration-500 ease-in-out mt-8 glass">
+          <div class="card-body">
+            <li class="list">
+              <a class=" text-amber-600 underline pl-3" href="/posts/post">
+                {post.frontmatter.name}
+              </a>
+            </li>
+          </div>
+        </div>
       ))}
     </div>
   </div>
 </BaseLayout>
+<style>
+  .list {
+    list-style-type: "\1F449";
+  }
+</style>

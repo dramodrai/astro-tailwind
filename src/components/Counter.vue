@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex gap-5 text-2xl p-4 bg-gray-200 font-bold text-amber-700 mt-4 justify-around"
-  >
+  <div class="flex gap-5 bg-slate-200/50 rounded-md text-2xl p-14 justify-around">
     <button @click="subtract()">-</button>
     <pre>{{ count }}</pre>
     <button @click="add()">+</button>

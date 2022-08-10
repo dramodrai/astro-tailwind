@@ -6,10 +6,10 @@ const {} = Astro.props;
 ---
 
 <header
-  class="fixed top-0 z-40 flex-none mx-auto w-full backdrop-blur-2xl border-b dark:border-b-0"
+  class="fixed transition-all duration-300 top-0 z-40 flex-none mx-auto w-full backdrop-blur-2xl border-b dark:border-b-0 shadow-md"
 >
   <div
-    class="py-3 px-3 mx-auto w-full lg:flex lg:justify-between max-w-6xl lg:px-4 transition-all duration-300"
+    class="py-3 px-3 mx-auto w-[80%] lg:flex lg:justify-between max-w-6xl lg:px-4 transition-all duration-300"
   >
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
@@ -30,7 +30,7 @@ const {} = Astro.props;
           />
         </button> -->
         <button
-          class="ml-1focus:outline-none focus:ring-4  rounded-lg text-sm p-2.5 inline-flex items-center"
+          class="ml-1 transition-all duration-300 hover:scale-125 hover:text-green-600 focus:outline-none rounded-lg text-sm p-2.5 inline-flex items-center"
           onclick="toggleMenu()"
         >
           <Icon name="carbon:menu" class="h-6" />
