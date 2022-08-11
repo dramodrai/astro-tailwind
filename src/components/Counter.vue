@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script type="text/partytown" setup>
 import { ref } from "vue";
 
 const count = ref(0);

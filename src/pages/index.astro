@@ -2,22 +2,30 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const posts = await Astro.glob("./posts/*.md");
 import Theme from "../components/Theme.vue";
+import { Image } from "@astrojs/image/components";
 import "../styles/base.css";
 ---
 
 <BaseLayout title="Astro Tailwind with new packages">
-  <div class="w-full h-screen justify-center mt-20 ">
-    <div class=" w-[80%] mx-auto">
+  <div class="w-full h-screen justify-center 
+    ">
+    <div
+      class=" w-[90%] md:w-[80%] h-screen mx-auto bg-gradient-to-r from-indigo-600 via-purple-700 to-amber-500 backdrop-blur-xl mt-[16%] md:mt-[6%] px-5 pb-3"
+    >
       <h2
-        class="text-green-500 text-xl md:text-3xl transition-all mt-28 mb-9 font-bold "
+        class="text-green-500 text-xl md:text-3xl transition-all mt-[5%] pt-7 mb-9 font-bold "
       >
         Astro Js with new Packages 🚀
       </h2>
+
       {posts.map((post) => (
-        <div class="card w-96 bg-base-100 shadow-md hover:shadow-2xl hover:transition-all duration-500 ease-in-out mt-8 glass">
+        <div class="card w-[100%] md:w-[50%] lg:w-[75%] shadow-lg border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce mt-8">
           <div class="card-body">
             <li class="list">
-              <a class=" text-amber-600 underline pl-3" href="/posts/post">
+              <a
+                class=" text-slate-100 shadow-xl underline pl-3"
+                href="/posts/post"
+              >
                 {post.frontmatter.name}
               </a>
             </li>

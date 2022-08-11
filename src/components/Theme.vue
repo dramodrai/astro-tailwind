@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script setup>
+<script type="text/partytown" setup>
 import { onMounted, onUpdated, onUnmounted } from "vue";
 import { themeChange } from "theme-change";
 
