@@ -1,7 +1,7 @@
 ---
 name: "Vue framewoerk add in Astro"
 slug: "astro_tailwind_vue_framework"
-layout: ../../layouts/PostLayout.astro
+layout: "@/layouts/PostLayout.astro"
 ---
 
 # Vue Framework as components added to the Astro
