@@ -37,13 +37,13 @@ const {} = Astro.props;
         </button>
       </div>
     </div>
-    <div class="items-center w-full lg:w-auto hidden lg:flex " id="menu">
+    <div class="items-center w-full lg:w-auto hidden lg:flex" id="menu">
       <ul
         class="flex flex-col py-2 lg:py-0 lg:flex-row lg:self-center collapse w-full lg:w-auto collapsed"
       >
         <li>
           <a
-            class="font-medium  px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="font-medium px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="/about"
             >About
           </a>
@@ -106,7 +106,7 @@ const {} = Astro.props;
     }
     window.toggleMenu = toggleMenu;
   </script> -->
-  <script is:inline type="text/partytown">
+  <script is:inline>
     function toggleMenu() {
       document.getElementById("menu").classList.toggle("hidden");
     }

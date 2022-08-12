@@ -25,16 +25,11 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: {
-      theme: 'nord',
-      langs: [],
+      theme: 'github-dark',
+      langs: ['astro','vue','js','css','html','json','jsx','tsx','svelte'],
       wrap: true
     },
     // syntaxHighlight: 'prism',
     drafts: true
-  } // colorMode: {
-  //   preference: 'system', // default theme
-  //   dataValue: 'theme', // activate data-theme in <html> tag
-  //   classSuffix: '',
-  // },
-
+  } 
 });

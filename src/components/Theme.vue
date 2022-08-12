@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-md">
+  <div class="rounded-xs">
     <select class="select w-full max-w-xs" data-choose-theme>
       <option disabled selected>Theme</option>
 
@@ -11,6 +11,7 @@
 <script type="text/partytown" setup>
 import { onMounted, onUpdated, onUnmounted } from "vue";
 import { themeChange } from "theme-change";
+
 
 onMounted(() => {
   themeChange(false);

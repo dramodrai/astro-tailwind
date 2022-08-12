@@ -1,2 +1,15 @@
-<a href="/">Back</a>
-<h1>This page is not available</h1>
+---
+import layout from "@/layouts/BaseLayout.astro";
+import "@/styles/base.css";
+---
+
+<layout>
+  <div class="container mx-auto w-full items-center p-20">
+    <button class="btn btn-primary"><a href="/">Back</a></button>
+    <div class="items-center justify-content">
+      <h1 class="justify-center items-center text-center align-center">
+        This page is not available
+      </h1>
+    </div>
+  </div>
+</layout>

@@ -4,8 +4,8 @@ export interface Props {
 }
 
 const { content } = Astro.props;
-import Header from "../components/Header.astro";
-import "../styles/base.css";
+import Navbar from "@/components/Navbar.astro";
+import "@/styles/base.css";
 ---
 
 <!DOCTYPE html>
@@ -21,13 +21,13 @@ import "../styles/base.css";
         document.documentElement.setAttribute("data-theme", localStorage.theme);
     </script>
   </head>
-  <body class=" scroll-smooth transition-all duration-300">
-    <Header />
+  <body class="scroll-smooth transition-all duration-300">
+    <Navbar />
     <div class="w-full justify-center items center">
-      <div class="w-3/4 mx-auto">
-        <div class="mt-24 mb-9"></div>
-        <h1 class="text-4xl">{content.name}</h1>
-        <slot />
+      <div class="h-screen py-5 mx-0">
+        <article class="prose prose-xs lg:prose-base mx-auto">
+          <slot />
+        </article>
       </div>
     </div>
   </body>
