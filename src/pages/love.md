@@ -1,7 +1,0 @@
----
-
-
----
-# Testing
-
-One two three
