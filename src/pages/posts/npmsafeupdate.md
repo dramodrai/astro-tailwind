@@ -1,6 +1,7 @@
 ---
 name: "NPM safe update"
 slug: "npm-safe-update"
+discription: "How safely update your project details here"
 layout: "@/layouts/PostLayout.astro"
 ---
 

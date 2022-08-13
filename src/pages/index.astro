@@ -1,36 +1,52 @@
 ---
+import Card from "@/components/Card.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 const posts = await Astro.glob("./posts/*.md");
+
 import "@/styles/base.css";
 ---
 
 <BaseLayout title="Astro Tailwind with new packages">
   <div class="w-full h-screen justify-center">
-    <div
-      class="w-[90%] md:w-[80%] h-screen mx-auto bg-gradient-to-r from-indigo-600 via-purple-700 to-amber-500 backdrop-blur-xl px-5 pb-3"
-    >
+    <div class="w-[90%] md:w-[80%] h-screen mx-auto px-5 pb-3">
       <h2
         class="text-green-500 text-xl md:text-3xl transition-all pt-7 mb-9 font-bold"
       >
         Astro Js with new Packages 🚀
       </h2>
+      <!-- <div class="flex">
+        {
+          posts.map((post) => (
+            <Card
+              href={`/posts/${post.frontmatter.slug}`}
+              title={post.frontmatter.name}
+              body={post.frontmatter.discription}
+            />
+          ))
+        }
+      </div> -->
 
-      {
-        posts.map((post) => (
-          <div class="card w-[100%] md:w-[50%] lg:w-[75%] shadow-lg border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce mt-8">
-            <div class="card-body">
-              <li class="list">
-                <a
-                  class=" text-slate-100 shadow-xl unde`rline pl-3"
-                  href={`/posts/${post.frontmatter.slug}`}
-                >
-                  {post.frontmatter.name}
-                </a>
-              </li>
+      <div class="grid lg:grid-cols-2 place-items-stretch gap-4">
+        {
+          posts.map((post) => (
+            <div class="card w-[100%]  shadow-md border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce mt-8">
+              <div class="card-body">
+                <li class="list">
+                  <a
+                    class=" underline pl-3"
+                    href={`/posts/${post.frontmatter.slug}`}
+                  >
+                    {post.frontmatter.name}
+                  </a>
+                </li>
+                <p class="pace-y-1 px-2 truncate md:text-clip">
+                  {post.frontmatter.discription}
+                </p>
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   </div>
 </BaseLayout>

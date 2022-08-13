@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.prose {
-  max-width: 80%;
-  padding: 2rem;
+@layer components {
+  .prose {
+    max-width: 80%;
+    padding: 2rem;
+  }
 }

@@ -1,6 +1,7 @@
 ---
 name: "Vue framewoerk add in Astro"
 slug: "astro_tailwind_vue_framework"
+discription: "Vue freamework can be used as components in Astro.js"
 layout: "@/layouts/PostLayout.astro"
 ---
 
