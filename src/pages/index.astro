@@ -1,16 +1,16 @@
 ---
-import Card from "@/components/Card.astro";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-const posts = await Astro.glob("./posts/*.md");
+import Card from '@/components/Card.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const posts = await Astro.glob('./posts/*.md');
 
-import "@/styles/base.css";
+import '@/styles/base.css';
 ---
 
 <BaseLayout title="Astro Tailwind with new packages">
   <div class="w-full h-screen justify-center">
-    <div class="w-[90%] md:w-[80%] h-screen mx-auto px-5 pb-3">
+    <div class="w-[90%] md:w-[80%] h-screen mx-auto px-5">
       <h2
-        class="text-green-500 text-xl md:text-3xl transition-all pt-7 mb-9 font-bold"
+        class="text-green-500 text-xl md:text-3xl transition-all py-1 md:py-4 font-bold"
       >
         Astro Js with new Packages 🚀
       </h2>
@@ -26,10 +26,10 @@ import "@/styles/base.css";
         }
       </div> -->
 
-      <div class="grid lg:grid-cols-2 place-items-stretch gap-4">
+      <div class="grid lg:grid-cols-2 place-items-stretch gap-4 py-8">
         {
           posts.map((post) => (
-            <div class="card w-[100%]  shadow-md border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce mt-8">
+            <div class="card w-[100%]  shadow-md border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce">
               <div class="card-body">
                 <li class="list">
                   <a
@@ -52,6 +52,6 @@ import "@/styles/base.css";
 </BaseLayout>
 <style>
   .list {
-    list-style-type: "\1F449";
+    list-style-type: '\1F449';
   }
 </style>

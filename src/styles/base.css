@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+}
+
 @layer components {
   .prose {
     max-width: 80%;
     padding: 2rem;
+  }
+  @media screen and (max-width: 780px) {
+    .prose {
+      max-width: 97%;
+      padding: 1.2 rem;
+    }
+  }
+  .prose :where(h1):not(:where([class~='not-prose'] *)) {
+    font-size: min(max(1.25rem, 4vw), 1.75rem);
   }
 }

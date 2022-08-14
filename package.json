@@ -10,22 +10,24 @@
   },
   "devDependencies": {
     "@astrojs/image": "^0.3.4",
-    "@astrojs/mdx": "^0.8.3",
-    "@astrojs/partytown": "^0.1.9",
-    "@astrojs/preact": "^0.5.2",
-    "@astrojs/sitemap": "^0.3.0",
-    "@astrojs/tailwind": "^0.2.5",
-    "@astrojs/vue": "^0.5.0",
+    "@astrojs/mdx": "^0.9.0",
+    "@astrojs/partytown": "^1.0.0",
+    "@astrojs/preact": "^1.0.2",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.3",
+    "astro": "^1.0.4",
     "preact": "^10.10.2",
     "prettier-plugin-astro": "^0.5.0",
     "vue": "^3.2.37"
   },
   "dependencies": {
+    "@astrojs/markdown-component": "^1.0.1",
+    "@astrojs/prism": "^1.0.1",
     "@vueuse/core": "^9.1.0",
     "astro-icon": "^0.7.3",
-    "daisyui": "^2.22.0",
+    "daisyui": "^2.24.0",
     "mdx": "^0.3.1",
     "theme-change": "^2.2.0"
   }
