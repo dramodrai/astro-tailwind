@@ -17,7 +17,7 @@
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.4",
+    "astro": "^1.0.5",
     "preact": "^10.10.2",
     "prettier-plugin-astro": "^0.5.0",
     "vue": "^3.2.37"
