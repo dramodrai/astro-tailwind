@@ -35,24 +35,24 @@ import ThemeChange from './ThemeChange.astro';
         </div>
         <a href="/" class="btn btn-ghost normal-case text-xl">Astro-Tailwind</a>
       </div>
-      <div class="navbar-end hidden lg:flex z-50">
-        <ul class="menu menu-compact menu-horizontal p-0">
-          <li><a href="/about">About</a></li>
-          <li tabindex="0">
-            <a>
-              Blog
-              <Icon name="ic:baseline-keyboard-arrow-down" class="h-6" />
-            </a>
-            <ul class="p-2 shadow bg-base-100">
-              <li><a>Tech Blog</a></li>
-              <li><a>Lit Blog</a></li>
-            </ul>
-          </li>
-          <!-- <li><a>Item 3</a></li> -->
-        </ul>
-        <!-- <Theme client:load /> -->
-      </div>
       <div class="flex navbar-end focus:border-none px-4">
+        <div class="navbar-end hidden lg:flex z-50">
+          <ul class="menu menu-compact menu-horizontal p-0">
+            <li><a href="/about">About</a></li>
+            <li tabindex="0">
+              <a>
+                Blog
+                <Icon name="ic:baseline-keyboard-arrow-down" class="h-6" />
+              </a>
+              <ul class="p-2 shadow bg-base-100">
+                <li><a>Tech Blog</a></li>
+                <li><a>Lit Blog</a></li>
+              </ul>
+            </li>
+            <!-- <li><a>Item 3</a></li> -->
+          </ul>
+          <!-- <Theme client:load /> -->
+        </div>
         <ThemeChange />
       </div>
     </div>

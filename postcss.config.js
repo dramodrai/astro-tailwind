@@ -4,7 +4,8 @@ const OpenProps = require('open-props');
 module.exports = {
   plugins: [
     postcssJitProps(OpenProps),
-    
+    require('autoprefixer'),
+    require('cssnano'),
   
   ]
 }
