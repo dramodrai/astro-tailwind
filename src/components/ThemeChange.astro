@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<select data-choose-theme class="p-2 bg-transparent">
+  <option value="luxury">luxury</option>
+  <option value=""> Default</option>
+  <option value="synthwave">synthwave</option>
+  <option value="retro">retro</option>
+  <option value="cyberpunk">cyberpunk</option>
+  <option value="wireframe">wireframe</option>
+  <option value="valentine">valentine</option>
+  <option value="aqua">Aqua</option>
+</select>
+
+<!-- <button
+  data-set-theme="winter"
+  class="btn btn-sm btn-ghost btn-square"
+  data-act-class="btn-active"
+>
+  <Icon name="carbon:sun" class="h-6" />
+</button>
+<button
+  data-set-theme="garden"
+  class="btn btn-sm btn-ghost btn-square"
+  data-act-class="btn-active"
+>
+  <Icon name="carbon:bring-to-front" class="h-6" />
+</button>
+<button
+  data-set-theme="luxury"
+  class="btn btn-sm btn-ghost btn-square"
+  data-act-class="btn-active"
+>
+  <Icon name="bi:moon-fill" class="h-6" />
+</button> -->
+
+<script hoist type="module">
+  import { themeChange } from 'theme-change';
+  themeChange();
+</script>

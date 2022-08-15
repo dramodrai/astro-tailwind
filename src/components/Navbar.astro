@@ -1,11 +1,12 @@
 ---
-import { Icon } from "astro-icon";
-import Theme from "./Theme.vue";
+import { Icon } from 'astro-icon';
+import Theme from './Theme.vue';
+import ThemeChange from './ThemeChange.astro';
 ---
 
 <div class="w-full shadow-md">
   <div class="md:w-[90%] mx-auto">
-    <div class="navbar">
+    <div class="navbar flex">
       <div class="navbar-start">
         <div class="dropdown">
           <label
@@ -30,8 +31,6 @@ import Theme from "./Theme.vue";
                 <li><a>Lit Blog</a></li>
               </ul>
             </li>
-
-            <Theme client:load />
           </ul>
         </div>
         <a href="/" class="btn btn-ghost normal-case text-xl">Astro-Tailwind</a>
@@ -51,7 +50,10 @@ import Theme from "./Theme.vue";
           </li>
           <!-- <li><a>Item 3</a></li> -->
         </ul>
-        <Theme client:load />
+        <!-- <Theme client:load /> -->
+      </div>
+      <div class="flex navbar-end focus:border-none px-4">
+        <ThemeChange />
       </div>
     </div>
   </div>

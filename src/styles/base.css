@@ -6,12 +6,38 @@
   body {
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
+  h1 {
+    font-size: var(--font-size-fluid-2);
+    font-weight: var(--font-weight-7);
+    letter-spacing: var(--font-letterspacing-1);
+    line-height: var(--font-lineheight-1);
+    color: var(--blue-6);
+    font-family: var(--font-serif);
+  }
+  .title {
+    margin-block: var(--size-fluid-3);
+  }
+
+  h2 {
+    font-size: var(--font-size-fluid-1);
+  }
+  h3 {
+    font-size: var(--font-size-fluid-1);
+  }
+  p {
+    font-size: var(--font-size-2);
+  }
+  a {
+    color: var(--grape-6);
+    font-weight: var(--font-weight-6);
+  }
 }
 
 @layer components {
   .prose {
     max-width: 80%;
     padding: 2rem;
+    font-family: var(--font-sans);
   }
   @media screen and (max-width: 780px) {
     .prose {
@@ -20,6 +46,12 @@
     }
   }
   .prose :where(h1):not(:where([class~='not-prose'] *)) {
-    font-size: min(max(1.25rem, 4vw), 1.75rem);
+    /* font-size: min(max(1.25rem, 4vw), 1.75rem); */
+    font-size: var(--font-size-3);
+    letter-spacing: var(--font-letterspacing-1);
+    color: var(--cyan-4);
+  }
+  .prose pre code {
+    font-size: var(--font-size-fluid-0);
   }
 }
