@@ -1,15 +1,14 @@
 ---
-import Card from '@/components/Card.astro';
-import ThemeChange from '@/components/ThemeChange.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 const posts = await Astro.glob('./posts/*.md');
+import { SITE_TITLE } from '@/config';
 import '@/styles/base.css';
 ---
 
-<BaseLayout title="Astro Tailwind with new packages">
-  <div class="w-full h-screen justify-center">
+<BaseLayout title={SITE_TITLE}>
+  <div class="w-full h-screen">
     <div class="w-[90%] md:w-[80%] h-screen mx-auto">
-      <h1 class="title">Astro Js with new Packages 🚀</h1>
+      <h1 class="">Astro Js with new Packages 🚀</h1>
 
       <div class="grid md:grid-cols-2 place-items-stretch gap-4">
         {
@@ -18,8 +17,9 @@ import '@/styles/base.css';
               <div class="card-body">
                 <li class="list">
                   <a
-                    class=" underline pl-3"
+                    class=" underline pl-3 justify-between"
                     href={`/posts/${post.frontmatter.slug}`}
+                    href={Astro.url}
                   >
                     {post.frontmatter.name}
                   </a>

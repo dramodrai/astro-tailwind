@@ -7,12 +7,12 @@ import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
-
+import compress from "astro-compress";
 import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-tailwind-learn.netlify.app/',
+  site: 'https://newastro.netlify.app/',
   integrations: [
     tailwind({
       config: {
@@ -25,11 +25,17 @@ export default defineConfig({
     mdx(),
     partytown(),
     image(),
+    compress(),
+    
+    
   ],
   vite: {
     ssr: {
       external: ['svgo'],
     },
+  },
+  experimental: {
+    integrations: true,
   },
   markdown: {
     shikiConfig: {

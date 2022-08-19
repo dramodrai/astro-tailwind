@@ -1,29 +1,18 @@
 ---
-export interface Props {
-  title: string;
-}
-const { title } = Astro.props as Props;
+const { title, description } = Astro.props;
 
-import Navbar from "@/components/Navbar.astro";
-import Header from "@/components/Header.astro";
-import "@/styles/base.css";
+import Navbar from '@/components/Navbar.astro';
+import '@/styles/base.css';
+import BaseHead from '@/components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <title>{title}</title>
-    <script>
-      // Render blocking JS:
-      if (localStorage.theme)
-        document.documentElement.setAttribute("data-theme", localStorage.theme);
-    </script>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="scroll-smooth transition-all duration-300">
-    <!-- <Header /> -->
     <Navbar />
     <slot />
   </body>

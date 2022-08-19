@@ -1,31 +1,27 @@
 ---
 export interface Props {
   content: string;
+  title: string;
+  description: string;
 }
 
-const { content } = Astro.props;
-import Navbar from "@/components/Navbar.astro";
-import "@/styles/base.css";
+const { content, description, title } = Astro.props;
+import BaseHead from '@/components/BaseHead.astro';
+import Navbar from '@/components/Navbar.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
+import '@/styles/base.css';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>{content.name}</title>
-    <script>
-      // Render blocking JS:
-      if (localStorage.theme)
-        document.documentElement.setAttribute("data-theme", localStorage.theme);
-    </script>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="scroll-smooth transition-all duration-300">
     <Navbar />
     <div class="w-full justify-center items center">
-      <div class="h-screen py-5 mx-0">
-        <article class="prose prose-xs lg:prose-base mx-auto">
+      <div class="h-screen py-5 mx-auto w-[90%]">
+        <article class="prose prose-base lg:prose-xl mx-auto">
           <slot />
         </article>
       </div>

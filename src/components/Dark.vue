@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script type="text/partytown" setup>
+<script setup>
 import { useColorMode } from "@vueuse/core";
 
 const themes = [

@@ -1,0 +1,21 @@
+h1 {
+  line-height: var(--font-lineheight-1);
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-9);
+  font-family: var(--font-serif);
+  background: var(--gradient-21);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: var(--size-fluid-3);
+}
+
+a {
+  background: var(--gradient-3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prose {
+  max-width: 100%;
+  padding: 0.5em;
+}
