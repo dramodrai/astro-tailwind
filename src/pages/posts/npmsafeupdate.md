@@ -1,8 +1,9 @@
 ---
-name: "NPM safe update"
-slug: "npm-safe-update"
-discription: "How safely update your project details here"
-layout: "@/layouts/PostLayout.astro"
+name: 'NPM safe update'
+title: 'NPM safe update'
+slug: 'npm-safe-update'
+discription: 'How safely update your project details here'
+layout: '@/layouts/PostLayout.astro'
 ---
 
 # How NPM safe Update With Npm Check Updates

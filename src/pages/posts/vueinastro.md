@@ -1,8 +1,9 @@
 ---
-name: "Vue framewoerk add in Astro"
-slug: "astro_tailwind_vue_framework"
-discription: "Vue freamework can be used as components in Astro.js"
-layout: "@/layouts/PostLayout.astro"
+name: 'Vue framewoerk add in Astro'
+title: 'Vue framewoerk add in Astro'
+slug: 'astro_tailwind_vue_framework'
+discription: 'Vue freamework can be used as components in Astro.js'
+layout: '@/layouts/PostLayout.astro'
 ---
 
 # Vue Framework as components added to the Astro
@@ -20,7 +21,7 @@ layout: "@/layouts/PostLayout.astro"
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 const count = ref(0);
 const add = () => (count.value = count.value + 1);
 const subtract = () => (count.value = count.value - 1);
