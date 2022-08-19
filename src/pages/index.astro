@@ -15,15 +15,17 @@ import '@/styles/base.css';
           posts.map((post) => (
             <div class="card w-[100%]  shadow-md border-x hover:border-2 backdrop-blur-lg hover:shadow-2xl hover:transition-all duration-300 ease-in-out bounce">
               <div class="card-body">
-                <li class="list">
-                  <a
-                    class=" underline pl-3 justify-between"
-                    href={`/posts/${post.frontmatter.slug}`}
-                    href={Astro.url}
-                  >
-                    {post.frontmatter.name}
-                  </a>
-                </li>
+                <ul>
+                  <li class="list">
+                    <a
+                      class=" underline pl-3 justify-between"
+                      href={`/posts/${post.frontmatter.slug}`}
+                      href={Astro.url}
+                    >
+                      {post.frontmatter.name}
+                    </a>
+                  </li>
+                </ul>
                 <p class="pace-y-1 px-2 truncate md:text-clip">
                   {post.frontmatter.discription}
                 </p>
