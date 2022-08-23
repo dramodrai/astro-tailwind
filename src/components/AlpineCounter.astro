@@ -1,0 +1,16 @@
+---
+const { initialCount = 0 } = Astro.props;
+---
+
+<div
+  class="grid font-bold grid-cols-3 mt-8 text-2xl text-amber-700 place-items-center"
+  x-data={`{ count: ${initialCount} }`}
+>
+  <button x-on:click="count--">-</button>
+  <pre x-text="count">{ initialCount }</pre>
+  <button x-on:click="count++">+</button>
+</div>
+
+<div class="text-center">
+  <slot />
+</div>

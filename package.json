@@ -9,7 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.3.4",
+    "@astrojs/alpinejs": "^0.1.0",
+    "@astrojs/image": "^0.3.6",
     "@astrojs/mdx": "^0.10.0",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/preact": "^1.0.2",
@@ -17,10 +18,12 @@
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.6",
-    
-    "preact": "^10.10.4",
-    "prettier-plugin-astro": "^0.5.0",
+    "@types/alpinejs": "^3.7.0",
+    "alpinejs": "^3.10.3",
+    "astro": "^1.0.7",
+    "preact": "^10.10.6",
+    "prettier-plugin-astro": "^0.5.1",
+    "unocss": "^0.45.12",
     "vue": "^3.2.37"
   },
   "dependencies": {
@@ -28,15 +31,16 @@
     "@astrojs/prism": "^1.0.1",
     "@astrojs/rss": "^1.0.0",
     "@vueuse/core": "^9.1.0",
-    "astro-compress": "^1.0.2",
+    "astro-compress": "^1.0.4",
     "astro-icon": "^0.7.3",
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.13",
     "daisyui": "^2.24.0",
-    "mdx": "^0.3.1",
-    "open-props": "^1.4.13",
+    "mdx": "^0.2.3",
+    "open-props": "^1.4.14",
     "postcss": "^8.4.16",
     "postcss-jit-props": "^1.0.7",
+    "swup": "^2.0.18",
     "theme-change": "^2.2.0"
   }
 }

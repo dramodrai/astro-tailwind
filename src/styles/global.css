@@ -15,7 +15,14 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-.prose {
+/* .prose {
   max-width: 100%;
   padding: 0.5em;
+} */
+
+.card {
+  animation: var(--animation-slide-in-up);
+  animation-timing-function: var(--ease-squish-4);
+  animation-duration: 1s;
+  background-color: var(--lime-0);
 }
