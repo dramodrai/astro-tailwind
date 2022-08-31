@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    font-family: Fira Sans;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: normal;
+    transition: all 0.5s ease;
+    scroll: smoth;
+  }
+  h1 {
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(1.6rem, 1rem + 3vw, 2.7rem);
+  }
+}

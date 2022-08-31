@@ -20,8 +20,10 @@ import '@/styles/base.css';
   <body class="scroll-smooth transition-all duration-300">
     <Navbar />
     <div class="w-full justify-center items center">
-      <div class="h-screen py-5 mx-auto w-[90%]">
-        <article class="prose prose-base lg:prose-xl mx-auto max-w-[80%]">
+      <div class="h-screen py-5 mx-auto">
+        <article
+          class="prose prose-base lg:prose-lg mx-auto max-w-5xl px-3 md:px-8 py-4 md:py-8"
+        >
           <slot />
         </article>
       </div>

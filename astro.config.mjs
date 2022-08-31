@@ -36,5 +36,6 @@ export default defineConfig({
     },
     // syntaxHighlight: 'prism',
     drafts: true
-  }
+  },
+  
 });

@@ -2,9 +2,9 @@
 const { title, description } = Astro.props;
 
 import Navbar from '@/components/Navbar.astro';
-import '@/styles/base.css';
 import BaseHead from '@/components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
+import '@/styles/base.css';
 ---
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/config';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="scroll-smooth transition-all duration-300">
+  <body class="">
     <Navbar />
     <slot />
   </body>

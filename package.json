@@ -9,9 +9,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/alpinejs": "^0.1.0",
-    "@astrojs/image": "^0.3.6",
-    "@astrojs/mdx": "^0.10.0",
+    "@astrojs/alpinejs": "^0.1.1",
+    "@astrojs/image": "^0.3.7",
+    "@astrojs/mdx": "^0.10.3",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/preact": "^1.0.2",
     "@astrojs/sitemap": "^1.0.0",
@@ -20,18 +20,19 @@
     "@tailwindcss/typography": "^0.5.4",
     "@types/alpinejs": "^3.7.0",
     "alpinejs": "^3.10.3",
-    "astro": "^1.0.7",
+    "astro": "^1.1.2",
     "preact": "^10.10.6",
-    "prettier-plugin-astro": "^0.5.1",
-    "unocss": "^0.45.12",
-    "vue": "^3.2.37"
+    "prettier-plugin-astro": "^0.5.4",
+    "unocss": "^0.45.13",
+    "vue": "^3.2.38"
   },
   "dependencies": {
     "@astrojs/markdown-component": "^1.0.1",
     "@astrojs/prism": "^1.0.1",
     "@astrojs/rss": "^1.0.0",
-    "@vueuse/core": "^9.1.0",
-    "astro-compress": "^1.0.4",
+    "@vueuse/core": "^9.1.1",
+    "aos": "^2.3.4",
+    "astro-compress": "^1.0.6",
     "astro-icon": "^0.7.3",
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.13",
@@ -40,7 +41,7 @@
     "open-props": "^1.4.14",
     "postcss": "^8.4.16",
     "postcss-jit-props": "^1.0.7",
-    "swup": "^2.0.18",
+    "swup": "^2.0.19",
     "theme-change": "^2.2.0"
   }
 }
